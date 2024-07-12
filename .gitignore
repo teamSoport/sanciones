@@ -4,3 +4,35 @@ dist
 ## environment variables
 
 .env
+
+
+## Changes to be committed:
+   .dockerignore
+   .gitignore
+   .nvmrc
+   .vscode/settings.json
+   Dockerfile
+   README.md
+   docker-compose.yml
+
+   docs/Datos-excel-CS/test.tasks.json
+   docs/bufer.html
+   docs/screenshot.png
+   package-lock.json
+   package.json
+   src/app.js
+   src/config.js
+   src/controllers/tasks.controllers.js
+   src/index.js
+
+   src/public/css/main.css
+   src/public/icons/empty.svg
+   src/routes/tasks.routes.js
+   src/utils/mongoose.js
+   src/views/404.hbs
+   src/views/edit.hbs
+   src/views/error.hbs
+   src/views/index.hbs
+   src/views/layouts/main.hbs
+   src/views/partials/navbar.hbs
+
