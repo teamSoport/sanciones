@@ -1,0 +1,79 @@
+{{#if tasks}}
+
+<table class="table table-bordered table-hover table-dark" style="margin: auto;">
+  <thead>
+    <tr>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each tasks}}
+    <!--  <tr>  {{ceiso_ut}} temporal
+        
+			<td>{{@index}}  </td>
+		</tr>
+-->
+
+
+      <!-- Acordeón anidado -->
+      <div class="accordion" id="accordionExample2">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Formulario 1
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample2">
+            <div class="accordion-body">
+              <!-- Contenido del acordeón hijo 2 -->
+              <!-- Acordeón anidado -->
+             
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin del acordeón anidado -->
+
+    
+
+    <tr>
+      <!--
+          <td>{{@index}}</td>
+         
+          <td><strong>{{ceiso_ut}}</strong></td>
+          <td>{{description}}</td>
+          <td> -->
+      {{#if done}}
+
+      <a class="btn btn-success" href="/tasks/{{_id}}/toggleDone">Done</a>
+      {{else}}
+      <a class="btn btn-dark" href="/tasks/{{_id}}/toggleDone">
+        Undone
+      </a>
+      {{/if}}
+      <a href="/tasks/{{_id}}/delete" class="btn btn-danger">
+        Delete
+      </a>
+      <a href="/tasks/{{_id}}/edit" class="btn btn-info">
+        Edit
+      </a>
+
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1>No tasks</h1>
+    <img src="/icons/empty.svg" class="w-75" />
+  </div>
+
+</div>
+{{/if}}
